@@ -154,7 +154,7 @@ static inline CGFloat radiansToDegrees(CGFloat radians) {
     (id)kCVPixelBufferPixelFormatTypeKey : @(kCVPixelFormatType_32BGRA),
     (id)kCVPixelBufferIOSurfacePropertiesKey : @{}
   };
-  _videoOutput = [[AVPlayerItemVideoOutput alloc] initWithPixelBufferAttributes:pixBuffAttributes];
+  _videoOutput = [[AVPlayerItemVideoOutput alloc] initWithPixelBufferAttributes:nil];
 
   _displayLink = [CADisplayLink displayLinkWithTarget:frameUpdater
                                              selector:@selector(onDisplayLink:)];
